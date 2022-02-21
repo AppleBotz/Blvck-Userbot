@@ -212,17 +212,17 @@ async def _(event):
                 if pic.endswith((".tgs", ".webp")):
                     await event.client.send_message(BOTLOG_CHATID, file=pic)
                     await event.client.send_message(
-                        BOTLOG_CHATID, f"🚨 News #AFK_OFFLINE\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
+                        BOTLOG_CHATID, f"🚨 News #AFK_OFFLINE\n\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
                     )
                 else:
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        f"🚨 News #AFK_OFFLINE\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀",
+                        f"🚨 News #AFK_OFFLINE\n\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀",
                         file=pic,
                     )
             else:
                 await event.client.send_message(
-                    BOTLOG_CHATID, f"🚨 News #AFK_OFFLINE\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
+                    BOTLOG_CHATID, f"🚨 News #AFK_OFFLINE\n\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
                 )
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
