@@ -138,7 +138,7 @@ PM_LIMIT = int(os.environ.get("PM_LIMIT", 6))
 
 # Custom Handler command
 CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
-SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
+SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"!")
 
 # Support
 GROUP = os.environ.get("GROUP", "BlackSupport")
@@ -161,7 +161,7 @@ UPSTREAM_REPO_URL = os.environ.get(
 )
 
 # Custom Name Sticker Pack
-S_PACK_NAME = os.environ.get("S_PACK_NAME", "Sticker Pack by @Blvckcards")
+S_PACK_NAME = os.environ.get("S_PACK_NAME", "Sticker Pack by @Blvckcards ✨")
 
 # SQL Database URI
 DB_URI = os.environ.get("DATABASE_URL", None)
@@ -561,7 +561,7 @@ with bot:
                     description="Repository Blvckcards - Userbot",
                     url="https://t.me/BlackSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **Owner Repo :** [@Blvckcards](https://t.me/AppleBotz)\n✣ **Support :** @Blvckcards\n✣ **Repository :** [Blvckcards-Userbot](https://github.com/AppleBotz/Man-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **Owner Repo :** [@Blvckcards](https://t.me/sharkuserbot)\n✣ **Support :** @Blvckcards\n✣ **Repository :** [Blvckcards-Userbot](https://github.com/AppleBotz/Man-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("✦ ɢʀᴏᴜᴘ", "https://t.me/BlackSupport"),
