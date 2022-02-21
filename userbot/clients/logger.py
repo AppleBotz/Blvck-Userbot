@@ -14,12 +14,13 @@ from userbot import CMD_HANDLER as cmd
 from userbot import MAN2, MAN3, MAN4, MAN5, bot, branch
 
 MSG_ON = """
-🔥 **Man-Userbot Berhasil Di Aktifkan**
-━━
-➠ **Userbot Version -** `{}@{}`
-➠ **Ketik** `{}alive` **untuk Mengecheck Bot**
-➠ **Managed By** {}
-━━
+ㅤ  ⏜  ֗ ✩ ֗ ִ  ❆‌ ࣪ ⩇‌⩇  ۪ ׁ ⇣ ◦  ֗ ִ ꑘ  ֢ ۫ 🍂 % ׂ  ִ 
+ (( 🍁 ))     
+    ⏝  ✦ ➠ **Shark-Userbot Running...**
+     ° ☆ ¸. ¸ ✦ ➠ **Version** - `{version} @{branch}`
+      ● .° °★   ✦ ➠ **Check Status Bot**`.alive`
+★　° :.　:.　.　¸ .  ¸ 
+ㅤ¸ .ㅤㅤㅤ᭡ ˖ ࣪ 🦊 ♪ ՞ ˖࣪  ٪   ࣪ ˖  𖥔  ᵎ  .  ۫ ⟳ ꒱
 """
 try:
     user = bot.get_me()
@@ -34,7 +35,7 @@ async def man_userbot_on():
             if BOTLOG_CHATID != 0:
                 await bot.send_message(
                     BOTLOG_CHATID,
-                    f"🔥 **Man-Userbot Berhasil Di Aktifkan**\n━━\n➠ **Userbot Version -** `{version}@{branch}`\n➠ **Ketik** `{cmd}alive` **untuk Mengecheck Bot**\n━━",
+                    f"  ⏜  ֗ ✩ ֗ ִ  ❆‌ ࣪ ⩇‌⩇  ۪ ׁ ⇣ ◦  ֗ ִ ꑘ  ֢ ۫ 🍂 % ׂ  ִ \n (( 🍁 ))     \n    ⏝  ✦ ➠ **Shark-Userbot Running...**\n     ° ☆ ¸. ¸ ✦ ➠ **Version** - `{version} @{branch}`\n      ● .° °★   ✦ ➠ **Check Status Bot**`.alive`\n★　° :.　:.　.　¸ .  ¸ \nㅤ¸ .ㅤㅤㅤ᭡ ˖ ࣪ 🦊 ♪ ՞ ˖࣪  ٪   ࣪ ˖  𖥔  ᵎ  .  ۫ ⟳ ꒱",
                 )
     except BaseException:
         pass
