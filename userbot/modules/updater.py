@@ -23,7 +23,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(xx, ac_br, changelog):
     changelog_str = (
-        f"**🍁 Tersedia Pembaruan Untuk [ {ac_br} ] :\n\n🍁 Pembaruan:**\n`{changelog}`"
+        f".                 ««〔 🦈 〕»»\n**🚨 New Updates For [ {ac_br} ] :\n\n🍁 New Update from :**\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
         await edit_or_reply(xx, "**Changelog terlalu besar, dikirim sebagai file.**")
@@ -46,7 +46,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await edit_or_reply(
                 xx,
-                "**[HEROKU]: Harap Tambahkan Variabel** `HEROKU_APP_NAME` "
+                "**[ HEROKU ] : Harap Tambahkan Variabel** `HEROKU_APP_NAME` "
                 " **untuk deploy perubahan terbaru dari Userbot.**",
             )
             repo.__del__()
@@ -95,7 +95,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
 
     else:
         return await edit_delete(
-            xx, "**[HEROKU]: Harap Tambahkan Variabel** `HEROKU_API_KEY`"
+            xx, "**[ HEROKU ] : Harap Tambahkan Variabel** `HEROKU_API_KEY`"
         )
 
 
@@ -169,14 +169,14 @@ async def upstream(event):
         return
 
     if changelog == "" and not force_update:
-        await edit_delete(xx, "**Shark-userbot has the latest version**\n\n                  ««〔 🦈 〕»»")
+        await edit_delete(xx, "**🤖 Shark-userbot has the latest version**\n\n                  ««〔 🦈 〕»»")
         return repo.__del__()
 
     if conf == "" and not force_update:
         await print_changelogs(xx, ac_br, changelog)
         await xx.delete()
         return await event.respond(
-            "**Ketik** `.update deploy` for update new version"
+            "**Ketik** `.update deploy` __for update new version__"
         )
 
     if force_update:
