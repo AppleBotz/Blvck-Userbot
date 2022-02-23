@@ -54,7 +54,7 @@ async def add(event):
     else:
         await edit_delete(
             xxnx,
-            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menambahkan pengguna sudo**",
+            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` untuk menambahkan pengguna sudo",
         )
         return
     heroku_Config = app.config()
@@ -68,7 +68,7 @@ async def add(event):
     newsudo = suudo.replace("{", "")
     newsudo = newsudo.replace("}", "")
     await xxnx.edit(
-        f"**Berhasil Menambahkan** `{target}` **ke Pengguna Sudo.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+        f"**««〔 🦈 〕»»** `{target}` **Done Added User In Heroku**\n\n`Proccessing for update sudo...`"
     )
     heroku_Config[var] = newsudo
 
@@ -109,13 +109,13 @@ async def _(event):
     if gett in sudousers:
         newsudo = sudousers.replace(gett, "")
         await xxx.edit(
-            f"**Berhasil Menghapus** `{target}` **dari Pengguna Sudo.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+            f"**««〔 🦈 〕»»** `{target}` **Done Added User In Heroku**\n\n`Proccessing for update sudo...`"
         )
         var = "SUDO_USERS"
         heroku_Config[var] = newsudo
     else:
         await edit_delete(
-            xxx, "**Pengguna ini tidak ada dalam Daftar Pengguna Sudo anda.**", 45
+            xxx, "`User ini tidak ada dalam Daftar Pengguna Sudo anda.`", 45
         )
 
 
