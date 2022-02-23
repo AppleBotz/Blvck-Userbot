@@ -23,7 +23,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(xx, ac_br, changelog):
     changelog_str = (
-        f"**✥ Tersedia Pembaruan Untuk [{ac_br}] :\n\n✥ Pembaruan:**\n`{changelog}`"
+        f"**🍁 Tersedia Pembaruan Untuk [{ac_br}] :\n\n🍁 Pembaruan:**\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
         await edit_or_reply(xx, "**Changelog terlalu besar, dikirim sebagai file.**")
@@ -59,7 +59,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
             await edit_or_reply(
                 xx,
                 f"{txt}\n"
-                "**Kredensial Heroku tidak valid untuk deploy Man-Userbot dyno.**",
+                "**Kredensial Heroku tidak valid untuk deploy Shark-Userbot dyno.**",
             )
             return repo.__del__()
         try:
@@ -90,7 +90,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
                 xx, "**Build Gagal!** Dibatalkan karena ada beberapa error.`"
             )
         await edit_or_reply(
-            xx, "`Man-Userbot Berhasil Di Deploy! Userbot bisa di gunakan kembali.`"
+            xx, "`Shark-Userbot Success Running Again ! Userbot bisa di gunakan kembali.`\n\n                  ««〔 🦈 〕»»"
         )
 
     else:
@@ -105,7 +105,7 @@ async def update(xx, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await edit_or_reply(
-        xx, "`Man-Userbot Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
+        xx, "`Shark-Userbot Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
     )
 
     try:
@@ -124,7 +124,7 @@ async def update(xx, repo, ups_rem, ac_br):
 @man_cmd(pattern="update( now| deploy|$)")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    xx = await edit_or_reply(event, "`Mengecek Pembaruan, Tunggu Sebentar...`")
+    xx = await edit_or_reply(event, "`Wait Check New Update Shark-Userbot... `")
     conf = event.pattern_match.group(1).strip()
     off_repo = UPSTREAM_REPO_URL
     force_update = False
@@ -133,7 +133,7 @@ async def upstream(event):
         txt += "Terjadi Beberapa ERROR**\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
-        await xx.edit(f"{txt}\n**Directory** `{error}` **Tidak Dapat Di Temukan.**")
+        await xx.edit(f"{txt}\n**Directory** `{error}` Tidak Dapat Di Temukan.")
         return repo.__del__()
     except GitCommandError as error:
         await xx.edit(f"{txt}\n**Kegagalan awal!** `{error}`")
@@ -163,19 +163,19 @@ async def upstream(event):
 
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if conf == "deploy":
-        await xx.edit("`[HEROKU]: Update Deploy Man-Userbot Sedang Dalam Proses...`")
+        await xx.edit("`[HEROKU] : New Update Shark-Userbot Proccessing...`")
         await deploy(xx, repo, ups_rem, ac_br, txt)
         return
 
     if changelog == "" and not force_update:
-        await edit_delete(xx, "**✥ Man-Userbot Sudah Versi Terbaru**")
+        await edit_delete(xx, "**Shark-userbot has the latest version**\n\n                  ««〔 🦈 〕»»")
         return repo.__del__()
 
     if conf == "" and not force_update:
         await print_changelogs(xx, ac_br, changelog)
         await xx.delete()
         return await event.respond(
-            "**Ketik** `.update deploy` **untuk Mengupdate Userbot.**"
+            "**Ketik** `.update deploy` for update new version"
         )
 
     if force_update:
