@@ -41,7 +41,7 @@ async def _(event):
         except noinline:
             xx = await edit_or_reply(
                 event,
-                "**Inline Mode Tidak aktif.**\n`Turning on mode inline, Proccessing...`",
+                "**Inline Mode Tidak aktif.**\n`Turning ON Mode Inline, Proccesing...`",
             )
             async with bot.conversation(chat) as conv:
                 try:
