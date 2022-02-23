@@ -161,7 +161,7 @@ UPSTREAM_REPO_URL = os.environ.get(
 )
 
 # Custom Name Sticker Pack
-S_PACK_NAME = os.environ.get("S_PACK_NAME", "Sticker Pack by @Blvckcards ✨")
+S_PACK_NAME = os.environ.get("S_PACK_NAME", "Sticker Pack by @BLVCKCARDS's ✨")
 
 # SQL Database URI
 DB_URI = os.environ.get("DATABASE_URL", None)
@@ -552,13 +552,13 @@ with bot:
                 result = builder.photo(
                     file=logoman,
                     link_preview=False,
-                    text=f"**✗ Blvckcards-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Blvckcards - Userbot",
+                    description="Repository Shark - Userbot",
                     url="https://t.me/BlackSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
                     text="**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **Owner Repo :** [@Blvckcards](https://t.me/sharkuserbot)\n✣ **Support :** @Blvckcards\n✣ **Repository :** [Blvckcards-Userbot](https://github.com/AppleBotz/Man-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
@@ -606,7 +606,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✗ Blvckcards-Userbot ✗",
+                    title="✗ Shark-Userbot ✗",
                     description="Blvckcards - UserBot | Telethon",
                     url="https://t.me/BlackSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
