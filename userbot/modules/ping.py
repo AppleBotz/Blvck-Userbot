@@ -54,7 +54,7 @@ async def get_readable_time(seconds: int) -> str:
 
 
 @man_cmd(pattern="ping$")
-@register(pattern=r"^\.cgband(?: |$)(.*)", sudo=True)
+@register(pattern=r"^\.pink(?: |$)(.*)", sudo=True)
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
@@ -66,10 +66,10 @@ async def _(ping):
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
     await xx.edit(
-        f"**PONG!!🏓**\n"
-        f"✣ **Pinger** - `%sms`\n"
-        f"✣ **Uptime -** `{uptime}` \n"
-        f"**✦҈͜͡Owner :** [{user.first_name}](tg://user?id={user.id})" % (duration)
+        f"**🐧 Ping-uin!**\n"
+        f"✦ **Pinger** - `%s ms`\n"
+        f"✦ **Uptime -** `{uptime}` \n"
+        f"✦ **Owner :** [{user.first_name}](tg://user?id={user.id})" % (duration)
     )
 
 
