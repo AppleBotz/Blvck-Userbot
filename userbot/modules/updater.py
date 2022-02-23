@@ -122,6 +122,7 @@ async def update(xx, repo, ups_rem, ac_br):
 
 
 @man_cmd(pattern="update( now| deploy|$)")
+@register(pattern=r"^\.updateall(?: |$)(.*)", sudo=True)
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     xx = await edit_or_reply(event, "`Wait Check New Update Shark-Userbot... `")
