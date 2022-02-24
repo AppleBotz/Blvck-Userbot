@@ -27,6 +27,19 @@ absen = [
     "**Hadir kak maap telat** 🥺",
 ]
 
+shark = [
+    "**Hey Boss I'am Alive...**",
+    "Haloo, Ayang lagi apa?",
+    "Ayanggg aku kangenn, kmu dari mana aja...",
+    "Boss saya sudah transfer uangnya ke rekening boss",
+    "Boss Menikahlah dengan saudara saya dia masih jomblo",
+    "Assalamu'alaikum...",
+    "Haii Kings, Why you call me?",
+    "**««〔 🦈 〕»»** `Yes I'am Shark !`",
+    "Halo Tuan Muda...",
+    "Iya Tuan saya Bersedia Menikah dengan Tuan Muda...",
+    "Tuan Muda, Anda sudah ditunggu Para Putri Kerajaan",
+]
 
 async def get_readable_time(seconds: int) -> str:
     count = 0
@@ -195,7 +208,7 @@ async def _(pong):
     xx = await edit_or_reply(pong, "`Sepong.....🏓`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await xx.edit("🏓 **Ping!**\n`%sms`" % (duration))
+    await xx.edit("🏓 **Ping !**\n`%sm s`" % (duration))
 
 
 # KALO NGEFORK absen ini GA USAH DI HAPUS YA GOBLOK 😡
@@ -203,7 +216,9 @@ async def _(pong):
 async def risman(ganteng):
     await ganteng.reply(random.choice(absen))
 
-
+@register(pattern=r"^\.shark$", sudo=True)
+async def boss(blvckcards):
+    await blvckcards.reply(random.choice(shark))
 # JANGAN DI HAPUS GOBLOK 😡 LU COPY AJA TINGGAL TAMBAHIN
 # DI HAPUS GUA GBAN YA 🥴 GUA TANDAIN LU AKUN TELENYA 😡
 
