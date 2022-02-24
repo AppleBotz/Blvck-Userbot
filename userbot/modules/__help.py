@@ -33,7 +33,7 @@ async def _(event):
     if BOT_USERNAME is not None:
         chat = "@Botfather"
         try:
-            results = await event.client.inline_query(BOT_USERNAME, "@BlackSupport")
+            results = await event.client.inline_query(BOT_USERNAME, "@SharkUserbot")
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
@@ -62,7 +62,7 @@ async def _(event):
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 await xx.edit(
-                    f"**Berhasil Menyalakan Mode Inline**\n\n**Ketik** `{cmd}helpme` **lagi untuk membuka menu bantuan.**"
+                    f"**Successfully Turn ON Mode Inline Bot**\n\n**Ketik** `{cmd}helpme` **lagi untuk membuka menu bantuan.**"
                 )
             await bot.delete_messages(
                 conv.chat_id,
