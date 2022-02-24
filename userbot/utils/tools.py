@@ -97,10 +97,10 @@ def time_formatter(seconds: int) -> str:
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
     tmp = (
-        ((str(days) + " hari, ") if days else "")
-        + ((str(hours) + " jam, ") if hours else "")
-        + ((str(minutes) + " menit, ") if minutes else "")
-        + ((str(seconds) + " detik, ") if seconds else "")
+        ((str(days) + " Days, ") if days else "")
+        + ((str(hours) + " hours, ") if hours else "")
+        + ((str(minutes) + " minutes, ") if minutes else "")
+        + ((str(seconds) + " seconds, ") if seconds else "")
     )
     return tmp[:-2]
 
@@ -315,8 +315,8 @@ async def bash(cmd):
 
 def post_to_telegraph(title, html_format_content):
     post_client = TelegraphPoster(use_api=True)
-    auth_name = "Blvck-Userbot"
-    auth_url = "https://github.com/Zxseus/Blvck-Userbot"
+    auth_name = "Shark-Userbot"
+    auth_url = "https://github.com/AppleBotz/Blvck-Userbot"
     post_client.create_api_token(auth_name)
     post_page = post_client.post(
         title=title,
