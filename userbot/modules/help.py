@@ -20,7 +20,7 @@ async def help(event):
         if args in CMD_HELP:
             await edit_or_reply(event, str(CMD_HELP[args]))
         else:
-            await edit_delete(event, f"`{args}` **Bukan Nama Modul yang Valid.**")
+            await edit_delete(event, f"`{args}` __🚫 Invalid Name Modules.__")
     else:
         user = await event.client.get_me()
         string = ""
@@ -29,12 +29,12 @@ async def help(event):
             string += f"`\t\t\t{ICON_HELP}\t\t\t"
         await edit_or_reply(
             event,
-            f"**✦ Daftar Perintah Untuk [Man-Userbot](https://github.com/mrismanaziz/Man-Userbot):**\n"
+            f"**✦ Daftar Perintah Untuk [Shark-Userbot](https://t.me/SharkUserbot):**\n"
             f"**✦ Jumlah** `{len(modules)}` **Modules**\n"
             f"**✦ Owner:** [{user.first_name}](tg://user?id={user.id})\n\n"
             f"{ICON_HELP}   {string}"
             f"\n\nSupport @{CHANNEL}",
         )
         await event.reply(
-            f"\n**Contoh Ketik** `{cmd}help afk` **Untuk Melihat Informasi Module**"
+            f"\n**Contoh Ketik** `{cmd}help alive` **Untuk Melihat Informasi Module**"
         )
