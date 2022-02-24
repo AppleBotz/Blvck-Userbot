@@ -44,13 +44,13 @@ def mentionuser(name, userid):
 async def gban(event):
     if event.fwd_from:
         return
-    gbun = await edit_or_reply(event, "`🚨 » » WARNING!!! « «`\n\n`Global Banned Activead...`")
+    gbun = await edit_or_reply(event, "`🚨 » » WARNING!!! « «`\n\n`Global Banned Activead...!`")
     start = datetime.now()
     user, reason = await get_user_from_event(event, gbun)
     if not user:
         return
     if user.id == (await event.client.get_me()).id:
-        await gbun.edit("**YYou Can't BANNED ur self !**")
+        await gbun.edit("**You Can't BANNED ur self !**")
         return
     if user.id in DEVS:
         await gbun.edit("**Failed Cause His My Owner**")
@@ -69,7 +69,7 @@ async def gban(event):
         await gbun.edit("**Anda Tidak mempunyai GC yang anda admin 🥺**")
         return
     await gbun.edit(
-        f"**initiating gban of the** [{user.first_name}](tg://user?id={user.id}) **in** `{len(san)}` **groups**"
+        f"`initialization Gban of the` [{user.first_name}](tg://user?id={user.id}) **in** `{len(san)}` **Groups**"
     )
     for i in range(fiz):
         try:
@@ -85,11 +85,11 @@ async def gban(event):
     timetaken = (end - start).seconds
     if reason:
         await gbun.edit(
-            f"`🚨 » » WARNING!!! « «` [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Reason :** `{reason}`"
+            f"`🚨 » » WARNING!!! « «`\n\n [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **Groups in** `{timetaken}` **seconds**!!\n**Reason :** `{reason}`"
         )
     else:
         await gbun.edit(
-            f"`🚨 » » WARNING!!! « «` [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Added to gbanlist.**"
+            f"`🚨 » » WARNING!!! « «`\n\n [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **Groups in** `{timetaken}` **seconds**!!\n**Added to Federation Gbanlist.**"
         )
 
 
@@ -107,7 +107,7 @@ async def ungban(event):
         gban_sql.freakungban(user.id)
     else:
         await ungbun.edit(
-            f"**Si** [Jamet](tg://user?id={user.id}) **ini tidak ada dalam daftar gban Anda**"
+            f".                    **««〔 🦈 〕»»** [{user.first_name}](tg://user?id={user.id}) **ini tidak ada dalam daftar gban Anda**"
         )
         return
     san = []
@@ -118,7 +118,7 @@ async def ungban(event):
         await ungbun.edit("**Anda Tidak mempunyai GC yang anda admin 🥺**")
         return
     await ungbun.edit(
-        f"**initiating ungban of the** [Jamet](tg://user?id={user.id}) **in** `{len(san)}` **groups**"
+        f"`initialization ungban of the` [{user.first_name}](tg://user?id={user.id}) **in** `{len(san)}` **Groups**"
     )
     for i in range(fiz):
         try:
