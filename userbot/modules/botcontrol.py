@@ -850,14 +850,14 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds
-    pin = f"🔥 Pɪɴɢ = {ms} microseconds"
+    pin = f"🌋 Pɪɴɢ = {ms} microseconds"
     await event.answer(pin, cache_time=0, alert=True)
 
 
 @callback(data=re.compile(b"uptimebot"))
 async def _(event):
     uptime = await get_readable_time((time.time() - StartTime))
-    pin = f"⏱ ᴜᴘᴛɪᴍᴇ = {uptime}"
+    pin = f"⏱ Uᴘᴛɪᴍᴇ = {uptime}"
     await event.answer(pin, cache_time=0, alert=True)
 
 
@@ -896,16 +896,16 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f". ⊹ ˚   ᘏ⑅ᘏ  \
-                        \n   ／꒰๑•ᴗ•๑꒱／＼\
-                        \n  ∠|￣∪∪￣|＼／      bαα, hαyyie   ！！！\
-                        \n    |＿＿＿＿|／\
+            start_msg = f"**. ⊹ ˚   ᘏ⑅ᘏ  **\
+                        \n**   ／꒰๑•ᴗ•๑꒱／＼**\
+                        \n**  ∠|￣∪∪￣|＼／      bαα, hαyyie   ！！！**\
+                        \n**    |＿＿＿＿|／**\
                         \n\n**👋 Hai** {mention}**!**\
-                        \n\n**Saya adalah {my_first}** \
-                        \n**Anda dapat menghubungi [{OWNER}](tg://user?id={OWNER_ID}) dari sini.**\
-                        \n**Jangan melakukan spam atau anda akan di Banned**\
-                        \n\n**Powered by :** [@Blvckcards](https://t.me/Blvckcards)\
-                        \n                    **««〔 🦈 〕»»**"
+                        \n\nSaya adalah Assistant **{my_first}** \
+                        \nAnda dapat menghubungi **[{OWNER}](tg://user?id={OWNER_ID})** dari sini.\
+                        \nJangan melakukan spam atau anda akan di **Banned**\
+                        \n\n**⚙️ Powered by :** [{my_fullname}](https://t.me/Blvckcards)\
+                        \n                                         **««〔 🦈 〕»»**"
         buttons = [
             (
                 Button.url("«« Sʜᴀʀᴋ »»", f"https://t.me/{CHANNEL}"),
