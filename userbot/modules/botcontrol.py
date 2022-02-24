@@ -74,7 +74,7 @@ def text_to_url(event):
 
 
 def get_back_button(name):
-    return [Button.inline("« ʙᴀᴄᴋ", data=f"{name}")]
+    return [Button.inline("« Bᴀᴄᴋ", data=f"{name}")]
 
 
 async def check_bot_started_users(user, event):
@@ -127,7 +127,7 @@ async def pmbot(event):
             buttons=[
                 [
                     custom.Button.inline(
-                        "« ʙᴀᴄᴋ",
+                        "« Bᴀᴄᴋ",
                         data="settings",
                     )
                 ],
@@ -154,8 +154,8 @@ async def users(event):
                 allow_cache=False,
                 buttons=[
                     (
-                        Button.inline("« ʙᴀᴄᴋ", data="settings"),
-                        Button.inline("ᴄʟᴏsᴇ", data="pmclose"),
+                        Button.inline("« Bᴀᴄᴋ", data="settings"),
+                        Button.inline("Cʟᴏsᴇ", data="pmclose"),
                     )
                 ],
             )
@@ -167,7 +167,7 @@ async def botsettings(event):
     if event.query.user_id == OWNER_ID:
         await tgbot.send_message(
             event.chat_id,
-            message=f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\n**Apa ada yang bisa saya bantu?**",
+            message=f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\n**Ada yang bisa saya bantu bos?**\n                  **««〔 🦈 〕»»**",
             buttons=[
                 (Button.inline("sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
                 (
@@ -178,7 +178,7 @@ async def botsettings(event):
                     Button.inline("ᴘɪɴɢ", data="pingbot"),
                     Button.inline("ᴜᴘᴛɪᴍᴇ", data="uptimebot"),
                 ),
-                (Button.inline("ᴄʟᴏsᴇ", data="pmclose"),),
+                (Button.inline("Cʟᴏsᴇ", data="pmclose"),),
             ],
         )
 
@@ -197,7 +197,7 @@ async def apiset(event):
                 Button.inline("ʜᴀɴᴅʟᴇʀ", data="hndlrmenu"),
                 Button.inline("ɪɴʟɪɴᴇ", data="inlinemenu"),
             ],
-            [Button.inline("« ʙᴀᴄᴋ", data="settings")],
+            [Button.inline("« Bᴀᴄᴋ", data="settings")],
         ],
     )
 
@@ -219,7 +219,7 @@ async def alivemenu(event):
                 Button.inline("ᴏᴘᴇɴ ᴡᴇᴀᴛʜᴇʀ", data="opnwth"),
                 Button.inline("ʀᴇᴍᴏᴠᴇ.ʙɢ ᴀᴘɪ", data="rmbgapi"),
             ],
-            [Button.inline("« ʙᴀᴄᴋ", data="apiset")],
+            [Button.inline("« Bᴀᴄᴋ", data="apiset")],
         ],
     )
 
@@ -230,17 +230,17 @@ async def alivemenu(event):
         "**Silahkan Pilih VAR yang ingin anda Setting**",
         buttons=[
             [
-                Button.inline("ᴀʟɪᴠᴇ ʟᴏɢᴏ", data="alvlogo"),
+                Button.inline("Aʟɪᴠᴇ Lᴏɢᴏ", data="alvlogo"),
             ],
             [
-                Button.inline("ᴀʟɪᴠᴇ ᴇᴍᴏᴊɪ", data="alvmoji"),
-                Button.inline("ᴀʟɪᴠᴇ ᴛᴇᴋs", data="alvteks"),
+                Button.inline("Aʟɪᴠᴇ Eᴍᴏᴊɪ", data="alvmoji"),
+                Button.inline("Aʟɪᴠᴇ Tᴇᴋs", data="alvteks"),
             ],
             [
-                Button.inline("ᴄʜᴀɴɴᴇʟ", data="alvch"),
-                Button.inline("ɢʀᴏᴜᴘ", data="alvgc"),
+                Button.inline("Cʜᴀɴɴᴇʟ", data="alvch"),
+                Button.inline("Gʀᴏᴜᴘ", data="alvgc"),
             ],
-            [Button.inline("« ʙᴀᴄᴋ", data="apiset")],
+            [Button.inline("« Bᴀᴄᴋ", data="apiset")],
         ],
     )
 
@@ -254,7 +254,7 @@ async def hndlrmenu(event):
                 Button.inline("ᴄᴍᴅ ʜᴀɴᴅʟᴇʀ", data="cmdhndlr"),
                 Button.inline("sᴜᴅᴏ ʜᴀɴᴅʟᴇʀ", data="sdhndlr"),
             ],
-            [Button.inline("« ʙᴀᴄᴋ", data="apiset")],
+            [Button.inline("« Bᴀᴄᴋ", data="apiset")],
         ],
     )
 
@@ -275,7 +275,7 @@ async def alivemenu(event):
                 Button.inline("sᴛʀɪɴɢ 4", data="strfor"),
                 Button.inline("sᴛʀɪɴɢ 5", data="strfiv"),
             ],
-            [Button.inline("« ʙᴀᴄᴋ", data="apiset")],
+            [Button.inline("« Bᴀᴄᴋ", data="apiset")],
         ],
     )
 
@@ -289,7 +289,7 @@ async def inlinemenu(event):
                 Button.inline("ɪɴʟɪɴᴇ ᴇᴍᴏᴊɪ", data="inmoji"),
                 Button.inline("ɪɴʟɪɴᴇ ᴘɪᴄ", data="inpics"),
             ],
-            [Button.inline("« ʙᴀᴄᴋ", data="apiset")],
+            [Button.inline("« Bᴀᴄᴋ", data="apiset")],
         ],
     )
 
@@ -850,7 +850,7 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds
-    pin = f"🔥 ᴘɪɴɢ = {ms} microseconds"
+    pin = f"🔥 Pɪɴɢ = {ms} microseconds"
     await event.answer(pin, cache_time=0, alert=True)
 
 
@@ -896,31 +896,36 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"**👋 Hai** {mention}**!**\
+            start_msg = f". ⊹ ˚   ᘏ⑅ᘏ  \
+                        \n   ／꒰๑•ᴗ•๑꒱／＼\
+                        \n  ∠|￣∪∪￣|＼／      bαα, hαyyie   ！！！\
+                        \n    |＿＿＿＿|／\
+                        \n\n**👋 Hai** {mention}**!**\
                         \n\n**Saya adalah {my_first}** \
                         \n**Anda dapat menghubungi [{OWNER}](tg://user?id={OWNER_ID}) dari sini.**\
                         \n**Jangan melakukan spam atau anda akan di Banned**\
-                        \n\n**Powered by :** [@BlackSupport](https://t.me/Blvckcards)"
+                        \n\n**Powered by :** [@Blvckcards](https://t.me/Blvckcards)\
+                        \n                    **««〔 🦈 〕»»**"
         buttons = [
             (
-                Button.url("ɢʀᴏᴜᴘ", f"https://t.me/{GROUP}"),
-                Button.url("ᴄʜᴀɴɴᴇʟ", f"https://t.me/{CHANNEL}"),
+                Button.url("«« Sʜᴀʀᴋ »»", f"https://t.me/{CHANNEL}"),
+                Button.url("«« Gʀᴏᴜᴘ »»", f"https://t.me/{GROUP}"),
             )
         ]
     else:
         start_msg = f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\
-            \n**Apa ada yang bisa saya bantu?**\n\n**⚙️ Powered By : @Blvckcards's"
+            \n**Ada yang bisa saya bantu bos?**\n\n**⚙️ Powered By : @BLVCKCARDS's**"
         buttons = [
-            (Button.inline("• sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
+            (Button.inline("•• Sᴇᴛᴛɪɴɢs Vᴀʀs", data="apiset"),),
             (
-                Button.inline("ᴘᴍʙᴏᴛ", data="pmbot"),
-                Button.inline("ᴜsᴇʀs", data="users"),
+                Button.inline("• PᴍBᴏᴛ", data="pmbot"),
+                Button.inline("Usᴇʀs •", data="users"),
             ),
             (
-                Button.inline("ᴘɪɴɢ", data="pingbot"),
-                Button.inline("ᴜᴘᴛɪᴍᴇ", data="uptimebot"),
+                Button.inline("• Pɪɴɢ", data="pingbot"),
+                Button.inline("Uᴘᴛɪᴍᴇ •", data="uptimebot"),
             ),
-            (Button.inline("• ᴄʟᴏsᴇ", data="pmclose"),),
+            (Button.inline("•• Cʟᴏsᴇ", data="pmclose"),),
         ]
     try:
         await event.client.send_message(
@@ -972,4 +977,4 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await tgbot.send_message(event.chat_id, "**Pong!**\n`%s ms`" % duration)
+    await tgbot.send_message(event.chat_id, "**Pong !**\n`%s ms`" % duration)
