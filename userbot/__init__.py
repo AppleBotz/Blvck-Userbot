@@ -372,7 +372,7 @@ async def check_botlog_chatid() -> None:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**Blvck-UserBot v{BOT_VER} is back up and running!**\n\n"
+        f"**Shark-UserBot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
@@ -547,12 +547,12 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@BlackSupport"):
+            if event.query.user_id == uid and query.startswith("@BLACKSUPPORT"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=logoman,
                     link_preview=False,
-                    text=f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules\n\n                                    **««〔 🦈 〕»»**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -561,12 +561,12 @@ with bot:
                     description="Repository Shark - Userbot",
                     url="https://t.me/BlackSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **Owner Repo :** [@Blvckcards](https://t.me/sharkuserbot)\n✣ **Support :** @Blvckcards\n✣ **Repository :** [Blvckcards-Userbot](https://github.com/AppleBotz/Man-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **Owner Repo :** [@Blvckcards](https://t.me/sharkuserbot)\n✣ **Support :** @Blvckcards\n✣ **Repository :** [Blvckcards-Userbot](https://t.me/SharkUserbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("✦ ɢʀᴏᴜᴘ", "https://t.me/BlackSupport"),
+                            custom.Button.url("«« Sʜᴀʀᴋ »»", "https://t.me/BlVCKCARDS"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ ✦", "https://t.me/Blvckcards"
+                                " «« Gʀᴏᴜᴘ »»", "https://t.me/BLACKSUPPORT"
                             ),
                         ],
                     ],
@@ -610,12 +610,12 @@ with bot:
                     description="Blvckcards - UserBot | Telethon",
                     url="https://t.me/BlackSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n✣ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @Blvckcards\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n✣ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @Blvckcards\n➖➖➖➖➖➖➖➖➖➖\n\n           **««〔 🦈 〕»»**",
                     buttons=[
                         [
-                            custom.Button.url("✦ ɢʀᴏᴜᴘ", "https://t.me/BlackSupport"),
+                            custom.Button.url("«« Sʜᴀʀᴋ »»", "https://t.me/Blvckcards"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ ✦", "https://github.com/AppleBotz/Man-Userbot"
+                                " «« Gʀᴏᴜᴘ »»", "https://t.me/blacksupport"
                             ),
                         ],
                     ],
@@ -630,7 +630,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**✗ Blvckcards-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules"
+                text = f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules\n\n                                    **««〔 🦈 〕»»**"
                 await event.edit(
                     text,
                     file=logoman,
