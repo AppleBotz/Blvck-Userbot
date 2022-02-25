@@ -26,7 +26,7 @@ DEF_UNAPPROVED_MSG = (
     "✦ Tunggu sampai saya menyetujui PM anda.\n"
     "✦ Jangan Spam Chat atau anda akan otomatis diblokir.\n"
     "\n"
-    "**⚙ Powered by : @BLVCKCARDS's**\n"
+    "**⚙️ Powered by : @BLVCKCARDS's**\n"
 )
 
 
@@ -425,3 +425,6 @@ CMD_HELP.update(
         \n  •  **Function : **Menghapus pesan PM ke default.\
         \n\n  •  **Pesan Pribadi yang belum diterima saat ini tidak dapat disetel ke teks format kaya bold, underline, link, dll. Pesan akan terkirim normal saja**\
         \n\n**NOTE: Bila ingin Mengaktifkan PMPERMIT Silahkan Ketik:** `.set var PM_AUTO_BAN True`\
+    "
+    }
+)
