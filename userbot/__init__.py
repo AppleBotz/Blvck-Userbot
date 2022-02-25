@@ -141,8 +141,9 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"!")
 
 # Support
-GROUP = os.environ.get("GROUP", "BlackSupport")
-CHANNEL = os.environ.get("CHANNEL", "Blvckcards")
+CHANNEL = os.environ.get("CHANNEL", "BLVCKCARDS")
+GROUP = os.environ.get("GROUP", "SharkUserbot")
+
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -197,7 +198,7 @@ ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "🌺")
 INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "✘")
 
 # Custom icon HELP
-ICON_HELP = os.environ.get("ICON_HELP", "❉")
+ICON_HELP = os.environ.get("ICON_HELP", "❆")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -547,12 +548,12 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@BLACKSUPPORT"):
+            if event.query.user_id == uid and query.startswith("@SharkUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=logoman,
                     link_preview=False,
-                    text=f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules\n\n                                    **««〔 🦈 〕»»**",
+                    text=f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules\n\n                                   **««〔 🦈 〕»»**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -566,7 +567,7 @@ with bot:
                         [
                             custom.Button.url("«« Sʜᴀʀᴋ »»", "https://t.me/BlVCKCARDS"),
                             custom.Button.url(
-                                " «« Gʀᴏᴜᴘ »»", "https://t.me/BLACKSUPPORT"
+                                " «« Gʀᴏᴜᴘ »»", "https://t.me/SharkUserbot"
                             ),
                         ],
                     ],
@@ -610,12 +611,12 @@ with bot:
                     description="Blvckcards - UserBot | Telethon",
                     url="https://t.me/BlackSupport",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n✣ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @Blvckcards\n➖➖➖➖➖➖➖➖➖➖\n\n           **««〔 🦈 〕»»**",
+                    text=f"**Blvckcards - UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n✣ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @BLVCKCARDS's\n➖➖➖➖➖➖➖➖➖➖\n\n            **««〔 🦈 〕»»**",
                     buttons=[
                         [
                             custom.Button.url("«« Sʜᴀʀᴋ »»", "https://t.me/Blvckcards"),
                             custom.Button.url(
-                                " «« Gʀᴏᴜᴘ »»", "https://t.me/blacksupport"
+                                " «« Gʀᴏᴜᴘ »»", "https://t.me/sharkuserbot"
                             ),
                         ],
                     ],
@@ -630,7 +631,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules\n\n                                    **««〔 🦈 〕»»**"
+                text = f"**✗ Shark-Userbot Inline Menu ✗**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules\n\n                                   **««〔 🦈 〕»»**"
                 await event.edit(
                     text,
                     file=logoman,
