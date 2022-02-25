@@ -25,20 +25,21 @@ absen = [
     "**Hadir ganteng** 🥵",
     "**Hadir bro** 😎",
     "**Hadir kak maap telat** 🥺",
+    "**Hey Ayang Apa kabar...**",
 ]
 
 shark = [
     "**Hey Boss I'am Alive...**",
-    "Haloo, Ayang lagi apa?",
-    "Ayanggg aku kangenn, kmu dari mana aja...",
-    "Boss saya sudah transfer uangnya ke rekening boss",
-    "Boss Menikahlah dengan saudara saya dia masih jomblo",
-    "Assalamu'alaikum...",
-    "Haii Kings, Why you call me?",
-    "**««〔 🦈 〕»»** `Yes I'am Shark !`",
-    "Halo Tuan Muda...",
-    "Iya Tuan saya Bersedia Menikah dengan Tuan Muda...",
-    "Tuan Muda, Anda sudah ditunggu Para Putri Kerajaan",
+    "**__Haloo, Ayang lagi apa?__**",
+    "**__Ayanggg aku kangenn, kmu dari mana aja...__**",
+    "**__Boss saya sudah transfer uangnya ke rekening boss__**",
+    "**__Boss Menikahlah dengan saudara saya dia masih jomblo__**",
+    "**__Assalamu'alaikum...__**",
+    "**__Haii Kings, Why you call me?__**",
+    "**««〔 🦈 〕»»** `Yes I'am Shark... !`",
+    "**__Halo Tuan Muda...__**",
+    "**__Iya Tuan saya Bersedia Menikah dengan Tuan Muda...__**",
+    "**__Tuan Muda, Anda sudah ditunggu para Putri Kerajaan__**",
 ]
 
 async def get_readable_time(seconds: int) -> str:
@@ -71,10 +72,12 @@ async def get_readable_time(seconds: int) -> str:
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    xx = await edit_or_reply(ping, "**✣**")
-    await xx.edit("**✣✣**")
-    await xx.edit("**✣✣✣**")
-    await xx.edit("**✣✣✣✣**")
+    xx = await edit_or_reply(ping, "**««〔 🦈 〕»»**")
+    await xx.edit("**« « 〔 🦈 〕 » »**")
+    await xx.edit("**»»〔 🦈 〕««**")
+    await xx.edit("**««〔 🦈 〕»»**")
+    await xx.edit("**« « 〔 🦈 〕 » »**")
+    await xx.edit("**»»〔 🦈 〕««**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
