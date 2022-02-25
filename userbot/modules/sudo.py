@@ -68,7 +68,7 @@ async def add(event):
     newsudo = suudo.replace("{", "")
     newsudo = newsudo.replace("}", "")
     await xxnx.edit(
-        f"**««〔 🦈 〕»»** `{target}` **Done Added User In Heroku**\n\n`Proccessing for update sudo...`"
+        f"**««〔 🦈 〕»»**\n**Analyze** `{target}` **Done Added User In Shark Userbot**\n\n`Proccessing for update sudo...`"
     )
     heroku_Config[var] = newsudo
 
@@ -109,7 +109,7 @@ async def _(event):
     if gett in sudousers:
         newsudo = sudousers.replace(gett, "")
         await xxx.edit(
-            f"**««〔 🦈 〕»»** `{target}` **Done Added User In Heroku**\n\n`Proccessing for update sudo...`"
+            f"**««〔 🦈 〕»»**\n**Analyze** `{target}` **Done Added User In Shark Userbot**\n\n`Proccessing for update sudo...`"
         )
         var = "SUDO_USERS"
         heroku_Config[var] = newsudo
