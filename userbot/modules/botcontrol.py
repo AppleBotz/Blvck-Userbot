@@ -901,11 +901,11 @@ async def bot_start(event):
                         \n**  ∠|￣∪∪￣|＼／      bαα, hαyyie   ！！！**\
                         \n**    |＿＿＿＿|／**\
                         \n\n**👋 Hai** {mention}**!**\
-                        \n\nSaya adalah Assistant **{my_first}** \
+                        \n\nSaya adalah **{my_first}** \
                         \nAnda dapat menghubungi **[{OWNER}](tg://user?id={OWNER_ID})** dari sini.\
                         \nJangan melakukan spam atau anda akan di **Banned**\
                         \n\n**⚙️ Powered by :** [{my_fullname}](https://t.me/Blvckcards)\
-                        \n                                         **««〔 🦈 〕»»**"
+                        \n                                        **««〔 🦈 〕»»**"
         buttons = [
             (
                 Button.url("«« Sʜᴀʀᴋ »»", f"https://t.me/{CHANNEL}"),
@@ -914,7 +914,7 @@ async def bot_start(event):
         ]
     else:
         start_msg = f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\
-            \n**Ada yang bisa saya bantu bos?**\n\n**⚙️ Powered By : @BLVCKCARDS's**"
+            \n**Ada yang bisa saya bantu Boss?**\n\n**⚙️ Powered By : @BLVCKCARDS's**"
         buttons = [
             (Button.inline("•• Sᴇᴛᴛɪɴɢs Vᴀʀs", data="apiset"),),
             (
