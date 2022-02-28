@@ -90,6 +90,44 @@ async def insta(event):
             await xx.delete()
             
             
+@man_cmd(pattern="igstory(?: |$)(.*)")
+async def insta(event):
+    xxnx = event.pattern_match.group(1)
+    if xxnx:
+        link = xxnx
+    elif event.is_reply:
+        link = await event.get_reply_message()
+    else:
+        return await edit_delete(
+            event,
+            "__Berikan Link Sosmed atau Reply Link Sosmed Untuk di Download__",
+        )
+    xx = await edit_or_reply(event, "`Processing Download...`")
+    chat = "@JayBeeInstaDLBot"
+    async with event.client.conversation(chat) as conv:
+        try:
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=711500294)
+            )
+            await event.client.send_message(chat, link)
+            response = await response
+        except YouBlockedUserError:
+            await event.client(UnblockRequest(chat))
+            await event.client.send_message(chat, link)
+            response = await response
+        if response.text.startswith("Forward"):
+            await xx.edit("Forward Private .")
+        else:
+            await xx.delete()
+            await event.client.send_file(
+                event.chat_id,
+                response.message.media,
+            )
+            await event.client.send_read_acknowledge(conv.chat_id)
+            await event.client(DeleteHistoryRequest(peer=chat, max_id=0))
+            await xx.delete()
+
+
 @man_cmd(pattern="dez(?: |$)(.*)")
 async def DeezLoader(event):
     if event.fwd_from:
@@ -175,7 +213,7 @@ async def _(event):
             event,
             "**Berikan Link Tiktok Pesan atau Reply Link Tiktok Untuk di Download**",
         )
-    xx = await edit_or_reply(event, "`Video song Sedang Diproses...`")
+    xx = await edit_or_reply(event, "`Video Song Sedang Diproses...`")
     chat = "@ttsongsbot"
     async with event.client.conversation(chat) as conv:
         try:
