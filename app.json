@@ -1,9 +1,9 @@
 {
-  "name": "Man-Userbot",
-  "description": "[Man-Userbot] userbot Telegram modular yang berjalan pada Python 3.9+",
+  "name": "Blvck",
+  "description": "[Blvck] userbot Telegram modular yang berjalan pada Python 3.9+",
   "logo": "https://telegra.ph/file/f34b3764975c1fd2f2e9d.jpg",
   "keywords": ["telegram", "userbot", "man-userbot", "modular", "python"],
-  "repository": "https://github.com/Zxseus/Blvck-Userbot",
+  "repository": "https://github.com/Applebotz/Blvck-Userbot",
   "stack": "container",
   "env": {
     "API_KEY": {
